@@ -21,16 +21,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Goal: {target}</h1>
-      <div>{currentValue}</div>
-      <h3>Add:</h3>
+      <h3>Goal: {target}</h3>
+      <h1 style={{background: "plum", border: "1px solid purple", borderWidth: "1px 0", color: "purple"}}>{currentValue}</h1>
+      <h3>Add:&nbsp;
       {digits.map((v, i) => 
         <button key={i} onClick={() => updateCurrentValue(p => p + v)}>{v}</button>
-      )}
-      <h3>Subtract:</h3>
+      )}</h3>
+      <h3>Subtract:&nbsp;
       {digits.map((v, i) => 
         <button key={i} onClick={() => updateCurrentValue(p => p - v)}>{v}</button>
-      )}
+      )}</h3>
     </div>
   );
 }
